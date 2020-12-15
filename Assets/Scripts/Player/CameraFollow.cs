@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-	
+	Transform player;
 
 	void Start()
 	{
-		
+		this.player = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 
 	
 
 	void Update()
 	{
-		this.gameObject.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
+		transform.position = new Vector3(player.position.x,player.position.y,player.position.z);
 	}
 }
